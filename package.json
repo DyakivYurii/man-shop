@@ -1,0 +1,57 @@
+{
+  "name": "game-forest",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp start",
+    "test": "jest --coverage",
+    "test:watch": "jest --watchAll"
+  },
+  "author": "Yurii Dyakiv",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "9.1.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
+    "babel-register": "6.26.0",
+    "browser-sync": "2.24.5",
+    "chai": "4.1.2",
+    "css-mqpacker": "7.0.0",
+    "del": "3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-better-rollup": "3.3.0",
+    "gulp-clean-css": "3.10.0",
+    "gulp-imagemin": "4.1.0",
+    "gulp-mocha": "6.0.0",
+    "gulp-plumber": "1.2.0",
+    "gulp-postcss": "8.0.0",
+    "gulp-rename": "1.4.0",
+    "gulp-sass": "4.0.1",
+    "gulp-sourcemaps": "2.6.4",
+    "gulp-uglify": "3.0.1",
+    "gulp-wait": "0.0.2",
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "global": "^4.3.2"
+  },
+  "description": "",
+  "babel": {
+    "plugins": [
+      "transform-es2015-modules-commonjs"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-node",
+    "collectCoverageFrom": [
+      "src/js/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 75,
+        "branches": 75,
+        "functions": 75,
+        "lines": 90
+      }
+    }
+  }
+}
