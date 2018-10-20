@@ -6,7 +6,7 @@ export default class ItemModel {
     }
 
     getInformation() {
-        return initialState.slice(0);
+        return Object.assign({}, initialState);
     }
 
     sendInformation() {

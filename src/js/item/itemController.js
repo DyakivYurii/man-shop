@@ -1,4 +1,4 @@
-import { globallStorage } from '../main';
+// import { globallStorage } from '../main';
 
 export default class ItemController {
     constructor(model, view, eventEmitter) {
@@ -9,8 +9,6 @@ export default class ItemController {
         this.view.render(this.model.storage);
         
         this.eventEmitter.on(`Like`, this.wasLiked.bind(this));
-
-        globallStorage.storage = this.model.storage;
     }
 
 
