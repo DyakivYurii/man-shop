@@ -15,12 +15,15 @@ const eventEmitter = new EventEmitter();
 const array = Object.entries(initialState).forEach(([id, object]) => {
     return { id, object };
 });
-// console.log(array);
 
 const itemModel = new ItemModel();
 const itemView = new ItemView(`#app`, eventEmitter);
 const itemController = new ItemController(itemModel, itemView, eventEmitter);
 
 const basketModel = new BasketModel();
-const basketView = new BasketView(`#app > .item`, `.basket`, eventEmitter);
+const basketView = new BasketView(`#app > .item`, `.basket`, `.basket__numbers`, eventEmitter);
 const basketController = new BasketController(basketModel, basketView, eventEmitter);
+
+const element = document.querySelector(`.item`);
+
+element.textContent

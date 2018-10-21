@@ -1,5 +1,3 @@
-// import { globallStorage } from '../main';
-
 export default class ItemController {
     constructor(model, view, eventEmitter) {
         this.model = model;

@@ -1,0 +1,8 @@
+.main-navigation {
+    // @include ul-padding-margin-null; 
+
+    &__site-list,
+    &__user-list {
+        @include ul-padding-margin-null;
+    }
+}

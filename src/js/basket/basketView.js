@@ -7,13 +7,13 @@ import { initialState } from '../data/data';
  * @param {Object} eventEmitter - for event system
  */
 export default class BasketView {
-    constructor(itemSelector, selector, eventEmitter) {
+    constructor(itemSelector, basketSelector, countSelector, eventEmitter) {
         // Should change only to render element in screen, not at all in storage
         this.listItem = [...document.querySelectorAll(itemSelector)];
-        this.container = document.querySelector(selector);
+        this.basketContainer = document.querySelector(basketSelector);
+        this.countBasketContainer = document.querySelector(countSelector);
         this.eventEmitter = eventEmitter;
 
-        this.renderBasket();
         this._bindButton();
     }
 
@@ -36,8 +36,8 @@ export default class BasketView {
         });
     }
 
-     bindBasketIncerase(id) {
-        const element = this.container.querySelector(`[data-number="${id}"]`);
+    bindBasketIncerase(id) {
+        const element = this.basketContainer.querySelector(`[data-number="${id}"]`);
         const icrease = element.querySelector(`.basket__increase`);
         const reduce = element.querySelector(`.basket__reduce`);
         const deleteButton = element.querySelector(`.basket__delete`);
@@ -57,11 +57,22 @@ export default class BasketView {
     }
 
     /**
-     * Render basket
+     * Change number indicator in basket
+     * @param {Number} productsCount - number of product in basket
      */
-    renderBasket() {
-        const markUp = `<h2>Basket</h2>`;
-        return this.container.innerHTML = markUp;
+    renderChangeBasketState(productsCount) {
+        console.log(`This product count =`, productsCount);
+        if(productsCount > 0) {
+            if(this.countBasketContainer.classList.contains(`visual-hidden`)) {
+                this.countBasketContainer.classList.remove(`visual-hidden`);
+            }
+            return this.countBasketContainer.textContent = productsCount;
+        } else {
+            if(!this.countBasketContainer.classList.contains(`visual-hidden`)) {
+                this.countBasketContainer.classList.add(`visual-hidden`);
+                return this.countBasketContainer.textContent = 0;
+            }
+        }
     }
 
     /**
@@ -78,7 +89,7 @@ export default class BasketView {
             <button class="basket__reduce" type="button">-</button>
             <button class="basket__delete" type="button">Delete</button>
         </article>`;
-        return this.container.insertAdjacentHTML(`beforeend`, markUp);
+        return this.basketContainer.insertAdjacentHTML(`beforeend`, markUp);
     }
 
     renderCount(id, HTMLelement) {
@@ -87,6 +98,6 @@ export default class BasketView {
     }
 
     deleteRenderedElement(HTMLelement) {
-        return this.container.removeChild(HTMLelement);
+        return this.basketContainer.removeChild(HTMLelement);
     }
 }

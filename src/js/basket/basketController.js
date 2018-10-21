@@ -11,7 +11,7 @@ export default class BasketController {
 	}
     
 	setItem(item) {
-		const id = this.model.getItemId(item)
+		const id = this.model.getItemId(item);
 		const check = this.model.checkItemInStorage(id);
 		if (check) {
 			this.model.increaseSum(id);
@@ -20,7 +20,8 @@ export default class BasketController {
 			this.view.renderBasketItem(id, element);
 			this.view.bindBasketIncerase(id);			
 		}
-		return id;
+		const storageLength = this.model.getSumElements();
+		this.view.renderChangeBasketState(storageLength);
 	}
 
 	increaseItem(id, HTMLelement) {
@@ -39,6 +40,8 @@ export default class BasketController {
 
 	deleteItem(id, HTMLelement) {
 		this.model.deleteItemFromStorage(id);
-		console.log(this.view.deleteRenderedElement(HTMLelement));
+		this.view.deleteRenderedElement(HTMLelement);
+		const storageLength = this.model.getSumElements();
+		this.view.renderChangeBasketState(storageLength);
 	}
 }

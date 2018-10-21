@@ -66,4 +66,11 @@ export default class BasketModel {
         }
         return false;
     }
+
+    /**
+     * Return lenght of storage
+     */
+    getSumElements() {
+        return Object.keys(this.storage).length;
+    }
 }

@@ -1,0 +1,12 @@
+// Global options
+// @import 'variables';
+@import 'mixins';
+@import 'libs/normalize.css';
+@import 'libs/bootstrap-grid.min.css';
+@import 'global-options';
+@import 'visual-hidden';
+
+// Header section
+@import 'main-header/main-header';
+@import 'main-navigation/main-navigation';
+// @import 'counter/counter';
