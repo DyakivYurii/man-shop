@@ -12,41 +12,47 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     </head>
     <body>
-        <header class="main-header container">
-            <nav class="main-navigation row">
-                <h1 class="main-logo col-3">This is logo</h1>
-                <ul class="main-navigation__site-list col-6 row">
-                    <li class="main-navigation__item col-4">
-                        <a href="#" class="main-navigation__link">Home</a>
-                    </li>
-                    <li class="main-navigation__item col-4">
-                        <a href="#" class="main-navigation__link">Shop</a>
-                    </li>
-                    <li class="main-navigation__item col-4">
-                        <a href="#" class="main-navigation__link">Contact</a>
-                    </li>  
-                </ul>
-                <ul class="main-navigation__user-list col-3 row">
-                    <li class="main-navigation__user-item col-4">
-                        <a href="#" class="main-navigation__user-link">Search</a>
-                    </li>
-                    <li class="main-navigation__user-item col-4">
-                        <a href="#" class="main-navigation__user-link">Profile</a>
-                    </li>
-                    <li class="main-navigation__user-item col-4">
-                        <a href="#" class="main-navigation__user-link basket">
-                            <img src="./img/shopping-bag.png" width="20" height="20" alt="Basket">
-                            <p class="basket__numbers visual-hidden">
-                                1
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        <header class="main-header">
+            <div class="container">
+                <nav class="main-navigation row">
+                    <h1 class="main-logo col-sm-3 col-3">This is logo</h1>
+                    <ul class="main-navigation__site-list cols-sm-5 col-md-6 col-lg-7">
+                        <li class="main-navigation__item">
+                            <a href="#" class="main-navigation__link">Home</a>
+                        </li>
+                        <li class="main-navigation__item">
+                            <a href="#" class="main-navigation__link">Shop</a>
+                        </li>
+                        <li class="main-navigation__item">
+                            <a href="#" class="main-navigation__link">Contact</a>
+                        </li>  
+                    </ul>
+                    <ul class="main-navigation__user-list col-sm-3 col-md-3 col-lg-2">
+                        <li class="main-navigation__user-item">
+                            <a href="#" class="main-navigation__user-link main-navigation__user-link--search">
+                                <p class="visual-hidden">Search</p>
+                            </a> 
+                        </li>
+                        <li class="main-navigation__user-item">
+                            <a href="#" class="main-navigation__user-link main-navigation__user-link--profile">
+                                <p class="visual-hidden">Profile</p>
+                            </a>
+                        </li>
+                        <li class="main-navigation__user-item">
+                            <a href="#" class="main-navigation__user-link main-navigation__user-link--basket">
+                                <p class="visual-hidden">Basket</p>
+                                <p class="basket__sum-indicator visual-hidden">
+                                    1
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <main id="app">
-            <section class="breadcrumbs">
+            <section class="bread-crumbs">
                 Text
             </section>
             <!-- <section class="basket">

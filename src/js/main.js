@@ -21,7 +21,7 @@ const itemView = new ItemView(`#app`, eventEmitter);
 const itemController = new ItemController(itemModel, itemView, eventEmitter);
 
 const basketModel = new BasketModel();
-const basketView = new BasketView(`#app > .item`, `.basket`, `.basket__numbers`, eventEmitter);
+const basketView = new BasketView(`#app > .item`, `.main-navigation__user-link--basket`, `.basket__sum-indicator`, eventEmitter);
 const basketController = new BasketController(basketModel, basketView, eventEmitter);
 
 const element = document.querySelector(`.item`);
