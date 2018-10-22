@@ -33,9 +33,25 @@
     }
 
     &__like {
+        position: relative;
         width: 30px;
         margin: 0;
         padding: 0;
+        text-align: center;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            // background: #000;
+            background: url('../../img/like-empty-15.png') no-repeat;
+            background-position-x: 0px;
+            background-position-y: 0px;
+            // background-image: url("../../img/like-empty.png");
+        }
     }
 
     &__price {

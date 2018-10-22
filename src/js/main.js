@@ -17,7 +17,7 @@ const array = Object.entries(initialState).forEach(([id, object]) => {
 });
 
 const itemModel = new ItemModel();
-const itemView = new ItemView(`#app`, eventEmitter);
+const itemView = new ItemView(`#app .product > .row`, eventEmitter);
 const itemController = new ItemController(itemModel, itemView, eventEmitter);
 
 const basketModel = new BasketModel();

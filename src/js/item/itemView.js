@@ -31,10 +31,15 @@ export default class ItemView {
     render(items) {
         Object.entries(items).forEach(([id, item]) => {
             const markup = `
-            <article class="item" data-id="${id}">
-                <h2 data-id="${item.id}">${item.name}</h2>
-                <button class="like-button" type="button">Like</button>
-                <button class="basket" type="button">Add to card</button>
+            <article class="product__item col-sm-4" data-id="${id}">
+                <div class="product__wrapper">
+                    <img class="product__img" src="${item.srcOfImg}" alt="image of product">
+                    <div class="product__info">
+                        <h3 class="product__name">${item.name}</h3>
+                        <p class="product__like"></p>
+                        <p class="product__price">${item.price}</p>
+                    </div>
+                </div>
             </article>`;
             this.container.insertAdjacentHTML('beforeend', markup);
         });

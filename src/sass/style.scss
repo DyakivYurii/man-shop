@@ -1,8 +1,8 @@
 // Global options
 @import 'fonts.css';
-@import 'mixins';
 @import 'libs/normalize.css';
 @import 'libs/bootstrap-grid.min.css';
+@import 'mixins';
 @import 'global-options';
 @import 'visual-hidden';
 
@@ -12,6 +12,8 @@
 
 // Main section
 @import 'breadcrumbs/breadcrumbs';
+@import 'search-form/search-form';
 @import 'product/product';
 
 // Footer section
+@import 'main-footer/main-footer';

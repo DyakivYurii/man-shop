@@ -1,7 +1,7 @@
 // Зкидаємо відступи для списку
 @mixin ul-padding-margin-null {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -14,5 +14,5 @@
     letter-spacing: 0;
     text-transform: none;
     text-decoration: none;
-    color: $main-text-color;
+    color: #000;
 }
