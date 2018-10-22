@@ -1,5 +1,5 @@
 // Global options
-// @import 'variables';
+@import 'fonts.css';
 @import 'mixins';
 @import 'libs/normalize.css';
 @import 'libs/bootstrap-grid.min.css';
@@ -9,4 +9,9 @@
 // Header section
 @import 'main-header/main-header';
 @import 'main-navigation/main-navigation';
-// @import 'counter/counter';
+
+// Main section
+@import 'breadcrumbs/breadcrumbs';
+@import 'product/product';
+
+// Footer section

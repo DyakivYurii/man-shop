@@ -9,14 +9,20 @@
         <link rel="stylesheet" href="css/style.min.css">
         
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet"> -->
     </head>
     <body>
         <header class="main-header">
             <div class="container">
-                <nav class="main-navigation row">
-                    <h1 class="main-logo col-sm-3 col-3">This is logo</h1>
-                    <ul class="main-navigation__site-list cols-sm-5 col-md-6 col-lg-7">
+                <nav class="main-navigation row align-items-center">
+                    <!-- <div class="main-navigation__burger col-sm-1">
+                        <button class="main-navigation__toggle" type="button">
+                            <span class="visual-hidden">Show menu</span>
+                        </button>
+                    </div> -->
+                    <h1 class="main-navigation__logo col-sm-3 col-lg-3"><span class="bold">M</span>an<span class="bold">S</span>hop</h1>
+                    <ul class="main-navigation__site-list col-sm-6 col-lg-7 order-2 order-lg-1">
                         <li class="main-navigation__item">
                             <a href="#" class="main-navigation__link">Home</a>
                         </li>
@@ -27,7 +33,7 @@
                             <a href="#" class="main-navigation__link">Contact</a>
                         </li>  
                     </ul>
-                    <ul class="main-navigation__user-list col-sm-3 col-md-3 col-lg-2">
+                    <ul class="main-navigation__user-list col-sm-3 col-lg-2 order-1 order-lg-2">
                         <li class="main-navigation__user-item">
                             <a href="#" class="main-navigation__user-link main-navigation__user-link--search">
                                 <p class="visual-hidden">Search</p>
@@ -51,16 +57,100 @@
             </div>
         </header>
 
-        <main id="app">
-            <section class="bread-crumbs">
-                Text
+        <section class="bread-crumbs">
+            <div class="container">
+                <!-- <a href="#" class="bread-crumbs__link">HOME</a> -->
+                <p class="bread-crumbs__text">HOME / <span class="bread-crumbs__text--current">SHOP</span></p>
+            </div>
+        </section>
+
+        <main id="app" class="container">
+            <section class="stuff row">
+                <form class="search-form col-sm-3" action="#" method="GET">
+                    <fieldset class="search-form__fieldset">
+                        <legend class="search-form__title">Categories</legend>
+                        <ul class="search-form__list">
+                            <li class="search-form__item">
+                                <input type="checkbox" name="jeans" id="checkbox-jeans">
+                                <div class="search-form__indicator"></div>
+                                <label for="checkbox-jeans">Jeans</label>
+                            </li>
+                            <li class="search-form__item">
+                                <input type="checkbox" name="jeans" id="checkbox-jeans">
+                                <div class="search-form__indicator"></div>
+                                <label for="checkbox-jeans">Jeans</label>
+                            </li>
+                            <li class="search-form__item">
+                                <input type="checkbox" name="jeans" id="checkbox-jeans">
+                                <div class="search-form__indicator"></div>
+                                <label for="checkbox-jeans">Sportswear</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="search-form__fieldset">
+                        <legend class="search-form__title">Price</legend>
+                        <div class="filter">
+                            <div class="filter__range">
+                                <div class="filter__slider-range">213131</div>
+                                <span class="filter__handle-">2</span>
+                                <span class="filter__handle-">2</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button class="search-form__submit" type="submit">Submit</button>
+                </form>
+                <section class="product container col-sm-9">
+                    <div class="row">
+                        <h2 class="visual-hidden">Products</h2>
+                        <article class="product__item col-sm-4">
+                            <div class="product__wrapper">
+                                <img class="product__img" src="./img/item-1.jpg" alt="image of product">
+                                <div class="product__info">
+                                    <h3 class="product__name">Name Of Psroduct</h3>
+                                    <p class="product__like">1</p>
+                                    <p class="product__price">$40</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product__item col-sm-4">
+                            <div class="product__wrapper">
+                                <img class="product__img" src="./img/item-2.jpg" alt="image of product">
+                                <div class="product__info">
+                                    <h3 class="product__name">Name Of Psroduct</h3>
+                                    <p class="product__like">1</p>
+                                    <p class="product__price">$40</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product__item col-sm-4">
+                            <div class="product__wrapper">
+                                <img class="product__img" src="./img/item-1.jpg" alt="image of product">
+                                <div class="product__info">
+                                    <h3 class="product__name">Name Of Psroduct</h3>
+                                    <p class="product__like">1</p>
+                                    <p class="product__price">$40</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product__item col-sm-4">
+                            <div class="product__wrapper">
+                                <img class="product__img" src="./img/item-2.jpg" alt="image of product">
+                                <div class="product__info">
+                                    <h3 class="product__name">Name Of Psroduct</h3>
+                                    <p class="product__like">1</p>
+                                    <p class="product__price">$40</p>
+                                </div>
+                            </div>
+                        </article>
+                        <div class="product__page">
+                            
+                        </div>
+                    </div>
+                </section>
             </section>
-            <!-- <section class="basket">
-                
-            </section> -->
         </main>
         
-        <footer class="main-footer">
+        <footer class="main-footer container">
 
         </footer>
 

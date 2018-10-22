@@ -2,3 +2,4 @@ node_modules/*
 app/*
 .vscode/*
 src/img/*.png
+src/img/*.jpg

@@ -1,0 +1,18 @@
+.bread-crumbs {
+    height: 55px;
+    background-color: #fafafa;
+    margin-bottom: 50px;
+}
+
+.bread-crumbs__text {
+    padding-top: 18px;
+    margin: 0px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    color: #b1b1b1;
+
+    &--current {
+        color: #303030;
+    }
+}
