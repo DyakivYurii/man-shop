@@ -16,13 +16,13 @@
         <header class="main-header">
             <div class="container">
                 <nav class="main-navigation row align-items-center">
-                    <!-- <div class="main-navigation__burger col-sm-1">
+                    <h1 class="main-navigation__logo col-sm-3 col-lg-3"><span class="main-navigation__accent">M</span>an<span class="main-navigation__accent">S</span>hop</h1>
+                    <div class="main-navigation__burger col-sm-1">
                         <button class="main-navigation__toggle" type="button">
                             <span class="visual-hidden">Show menu</span>
                         </button>
-                    </div> -->
-                    <h1 class="main-navigation__logo col-sm-3 col-lg-3"><span class="main-navigation__accent">M</span>an<span class="main-navigation__accent">S</span>hop</h1>
-                    <ul class="main-navigation__site-list col-sm-6 col-lg-7 order-2 order-lg-1">
+                    </div>
+                    <ul class="main-navigation__site-list main-navigation__site-list--opened col-sm-12 col-lg-7 order-2 order-md-1">
                         <li class="main-navigation__item">
                             <a href="#" class="main-navigation__link">Home</a>
                         </li>
@@ -33,7 +33,7 @@
                             <a href="#" class="main-navigation__link">Contact</a>
                         </li>  
                     </ul>
-                    <ul class="main-navigation__user-list col-sm-3 col-lg-2 order-1 order-lg-2">
+                    <ul class="main-navigation__user-list col-sm-8 col-lg-2 order-1 order-md-2">
                         <li class="main-navigation__user-item">
                             <a href="#" class="main-navigation__user-link main-navigation__user-link--search">
                                 <p class="visual-hidden">Search</p>
@@ -57,28 +57,29 @@
             </div>
         </header>
 
+        <section class="bread-crumbs">
+            <div class="container">
+                <!-- <ul class="bread-crumbs__list">
+                    <li class="bread-crumbs__item">
+                        <a href="#" class="bread-crumbs__link">Home</a>
+                    </li>
+                    <li class="bread-crumbs__item">
+                        <a class="bread-crumbs__link bread-crumbs__link--current">Shop</a>
+                    </li>
+                </ul> -->
+                <a href="#" class="bread-crumbs__link">Home</a>
+                
+                <a class="bread-crumbs__link bread-crumbs__link--current">Shop</a>
+
+                <!-- <span class="bread-crumbs__slash"> / </span> -->
+
+                <!-- <p class="bread-crumbs__text">HOME / <span class="bread-crumbs__text--current">SHOP</span></p> -->
+            </div>
+        </section>
+
         <main id="app" class="container">
-            <section class="bread-crumbs">
-                <div class="container">
-                    <!-- <ul class="bread-crumbs__list">
-                        <li class="bread-crumbs__item">
-                            <a href="#" class="bread-crumbs__link">Home</a>
-                        </li>
-                        <li class="bread-crumbs__item">
-                            <a class="bread-crumbs__link bread-crumbs__link--current">Shop</a>
-                        </li>
-                    </ul> -->
-                    <a href="#" class="bread-crumbs__link">Home</a>
-                    
-                    <a class="bread-crumbs__link bread-crumbs__link--current">Shop</a>
-
-                    <!-- <span class="bread-crumbs__slash"> / </span> -->
-
-                    <!-- <p class="bread-crumbs__text">HOME / <span class="bread-crumbs__text--current">SHOP</span></p> -->
-                </div>
-            </section>
             <section class="stuff row">
-                <form class="search-form col-sm-3" action="#" method="GET">
+                <form class="search-form col-sm-12 col-md-3 green" action="#" method="GET">
                     <fieldset class="search-form__fieldset">
                         <legend class="search-form__title">Categories</legend>
                         <ul class="search-form__list">
@@ -111,9 +112,57 @@
                     </fieldset> -->
                     <button class="search-form__submit" type="submit">Filter</button>
                 </form>
-                <section class="product container col-sm-9">
+                <section class="product container col-sm-12 col-md-9 pink">
                     <div class="row">
                         <h2 class="visual-hidden">Products</h2>
+                        <article class="product__item col-sm-6 col-md-6 col-lg-4 green" data-id="dsfs2341">
+                                <div class="product__wrapper">
+                                    <img class="product__img" src="./img/item-1.jpg" alt="image of product">
+                                    <div class="product__info">
+                                        <h3 class="product__name">Cool Jaket For Real Man</h3>
+                                        <p class="product__like"></p>
+                                        <p class="product__price">$40</p>
+                                    </div>
+                                    <button class="like-button" type="button">Like</button>
+                                    <button class="basket" type="button">Add to card</button>
+                                </div>
+                            </article>
+                            <article class="product__item col-sm-6 col-md-6 col-lg-4" data-id="dsfs2341">
+                                    <div class="product__wrapper">
+                                        <img class="product__img" src="./img/item-1.jpg" alt="image of product">
+                                        <div class="product__info">
+                                            <h3 class="product__name">Cool Jaket For Real Man</h3>
+                                            <p class="product__like"></p>
+                                            <p class="product__price">$40</p>
+                                        </div>
+                                        <button class="like-button" type="button">Like</button>
+                                        <button class="basket" type="button">Add to card</button>
+                                    </div>
+                                </article>
+                                <article class="product__item col-sm-6 col-md-6 col-lg-4" data-id="dsfs2341">
+                                    <div class="product__wrapper">
+                                        <img class="product__img" src="./img/item-1.jpg" alt="image of product">
+                                        <div class="product__info">
+                                            <h3 class="product__name">Cool Jaket For Real Man</h3>
+                                            <p class="product__like"></p>
+                                            <p class="product__price">$40</p>
+                                        </div>
+                                        <button class="like-button" type="button">Like</button>
+                                        <button class="basket" type="button">Add to card</button>
+                                    </div>
+                                </article>
+                                <article class="product__item col-sm-6 col-md-6 col-lg-4" data-id="dsfs2341">
+                                    <div class="product__wrapper">
+                                        <img class="product__img" src="./img/item-1.jpg" alt="image of product">
+                                        <div class="product__info">
+                                            <h3 class="product__name">Cool Jaket For Real Man</h3>
+                                            <p class="product__like"></p>
+                                            <p class="product__price">$40</p>
+                                        </div>
+                                        <button class="like-button" type="button">Like</button>
+                                        <button class="basket" type="button">Add to card</button>
+                                    </div>
+                                </article>
                         <div class="product__page">
                         </div>
                     </div>

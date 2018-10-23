@@ -9,7 +9,7 @@ export default class ItemModel {
         return Object.assign({}, initialState);
     }
 
-    sendInformation() {
+    // sendInformation() {
 
-    }
+    // }
 }

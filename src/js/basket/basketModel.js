@@ -13,7 +13,6 @@ export default class BasketModel {
      * @param {Object} item - all item were was click
      */
     getItemId(item) {
-        console.log(`This is item form getItemId`, item, typeof(item));
         const id = item.dataset.id;
         return id;
     }

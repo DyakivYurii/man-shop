@@ -9,21 +9,6 @@ export default class ItemView {
         this.eventEmitter = eventEmitter;
     }
 
-    bindButton() {
-        const items = [...this.container.querySelectorAll(`.item`)];
-        items.forEach((item) => {
-            item.querySelector(`.like-button`).addEventListener(`click`, (event) => { 
-                event.preventDefault();
-                this.checkLike(item);
-            });
-        });
-    }
-
-    checkLike(item) {
-        event.preventDefault();
-        // this.eventEmitter.emit(`Like`, 3);
-    }
-
     /**
      * Render all items which get from Model
      * @param {Array} items - list of all item which should be render
@@ -43,11 +28,7 @@ export default class ItemView {
                     <button class="basket" type="button">Add to card</button>
                 </div>
             </article>`;
-
-            // <button class="like-button" type="button">Like</button>
-                // <button class="basket" type="button">Add to card</button>
             this.container.insertAdjacentHTML('beforeend', markup);
         });
-        this.bindButton();
     }
 }

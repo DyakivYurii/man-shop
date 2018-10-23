@@ -11,6 +11,7 @@
     &__wrapper {
         box-sizing: border-box;
         padding-bottom: 1px;
+        overflow: hidden;
     }
 
     &__info {
@@ -46,11 +47,9 @@
             left: 0;
             width: 20px;
             height: 20px;
-            // background: #000;
             background: url('../../img/like-empty-15.png') no-repeat;
             background-position-x: 0px;
             background-position-y: 0px;
-            // background-image: url("../../img/like-empty.png");
         }
     }
 
@@ -64,3 +63,11 @@
         letter-spacing: 0.03em;
     }
 }
+
+// .green {
+//     background-color: green;
+// }
+
+// .pink {
+//     background-color: pink;
+// }

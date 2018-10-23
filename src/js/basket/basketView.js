@@ -4,6 +4,7 @@ import { initialState } from '../data/data';
  * @constructor
  * @param {String} itemSelector - for finding all item
  * @param {String} basketSelector - for basket
+ * @param {String} countSelector - for showing count
  * @param {Object} eventEmitter - for event system
  */
 export default class BasketView {

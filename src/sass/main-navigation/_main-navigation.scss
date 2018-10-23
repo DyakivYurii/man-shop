@@ -79,33 +79,68 @@
     &__user-link:active {
         color: rgb(223, 149, 126);
     }
+
+    &__burger {
+        position: relative; 
+        display: block;
+    }
+    
+    &__toggle {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    &__toggle::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 23px;
+        height: 2px;
+        border-radius: 2px;
+        background: #000;
+        box-shadow: 0 7px 0 #000,
+                    0 -7px 0 #000;
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        position: relative;
+        
+        &__site-list {
+            // display: none;
+        }
+
+        &__site-list {
+            position: absolute;
+            flex-direction: column;
+            top: 90px;
+            left: 0;
+            z-index: 20;
+        }
+        
+        &__item {
+            display: block;
+            width: 100%;
+        }
+        
+        &__link {
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        
+        &__burger {
+            display: none;
+        }
+    }
 }
 
 // Plan to next day:
-// Change Logo
 // Find cool icons and change icons position  
-// create normal component for basket and others
-// change displaying in other screen
-
-
-// .toggle {
-//     position: relative;
-//     width: 30px;
-//     height: 30px;
-//     background-color: transparent;
-//     border: none;
-// }
-
-// .toggle::before {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, 50%);
-//     width: 30px;
-//     height: 2px;
-//     border-radius: 25%;
-//     background: #000;
-//     box-shadow: 0 8px 0 #000,
-//                 0 -8px 0 #000;
-// }
