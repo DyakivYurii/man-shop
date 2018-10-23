@@ -3,7 +3,7 @@ import { initialState } from '../data/data';
 /**
  * @constructor
  * @param {String} itemSelector - for finding all item
- * @param {String} selector - for basket
+ * @param {String} basketSelector - for basket
  * @param {Object} eventEmitter - for event system
  */
 export default class BasketView {
@@ -33,6 +33,21 @@ export default class BasketView {
                 event.preventDefault();
                 this.addItemBasket(item);
             });
+        });
+
+        const basketButton = document.querySelector(`.basket`);
+        console.log(basketButton);
+        basketButton.addEventListener(`click`, (event) => {
+            event.preventDefault();
+            console.log(`click`);
+            const list = basketButton.querySelector(`.basket__list`);
+            if(list.classList.contains(`basket__list--closed`)) {
+                list.classList.remove(`basket__list--closed`);
+                list.classList.add(`basket__list--opened`);
+            } else if(list.classList.contains(`basket__list--opened`)){
+                list.classList.remove(`basket__list--opened`);
+                list.classList.add(`basket__list--closed`);
+            }
         });
     }
 
@@ -77,24 +92,43 @@ export default class BasketView {
 
     /**
      * Render item in basket
+     * @param {String} id - object id 
      * @param {Object} item - info about item which must be render
      */
     renderBasketItem(id, item) {
         const markUp = `
         <article class="basket__item" data-number="${id}">
-            <h2>${item.name}</h2>
-            <p class="basket__count">Sum of this product: ${item.count}</p>
-            <p>Sum of element: ${item.price}</p>
-            <button class="basket__increase" type="button">+</button>
-            <button class="basket__reduce" type="button">-</button>
-            <button class="basket__delete" type="button">Delete</button>
+            <h2 class="basket__title">${item.name}</h2>
+            <div class="basket__flex-container">
+                <p class="basket__count">Count: <span class="basket__bold">${item.count}</span></p>
+                <p class="basket__price">Price: 
+                    <span class="basket__bold">$${item.price}</span>
+                </p>
+                <p class="basket__sum">Total: <span class="basket__bold">${item.price * item.count}</span></p>
+            </div>
+            <div class="basket__button-container">
+                <button class="basket__increase" type="button">+</button>
+                <button class="basket__reduce" type="button">-</button>
+                <button class="basket__delete" type="button">Delete</button>
+            </div>
         </article>`;
         return this.basketContainer.insertAdjacentHTML(`beforeend`, markUp);
     }
 
-    renderCount(id, HTMLelement) {
+    /**
+     * 
+     * @param {Object} item - all info about element
+     * @param {Object} HTMLelement - link to html element 
+     */
+    renderCount(item, HTMLelement) {
         const markUp = HTMLelement.querySelector(`.basket__count`);
-        return markUp.textContent = `Sum of this product: ${id.count}`;
+        markUp.innerHTML = `Count: <span class="basket__bold">${item.count}</span>`;
+        const total = HTMLelement.querySelector(`.basket__sum`);
+        total.innerHTML = `Total: <span class="basket__bold">${item.price * item.count}</span>`;
+        return {
+            markUp,
+            total
+        };
     }
 
     deleteRenderedElement(HTMLelement) {

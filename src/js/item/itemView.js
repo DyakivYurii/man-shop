@@ -37,10 +37,15 @@ export default class ItemView {
                     <div class="product__info">
                         <h3 class="product__name">${item.name}</h3>
                         <p class="product__like"></p>
-                        <p class="product__price">${item.price}</p>
+                        <p class="product__price">$${item.price}</p>
                     </div>
+                    <button class="like-button" type="button">Like</button>
+                    <button class="basket" type="button">Add to card</button>
                 </div>
             </article>`;
+
+            // <button class="like-button" type="button">Like</button>
+                // <button class="basket" type="button">Add to card</button>
             this.container.insertAdjacentHTML('beforeend', markup);
         });
         this.bindButton();

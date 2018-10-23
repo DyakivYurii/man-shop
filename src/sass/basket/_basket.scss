@@ -1,0 +1,100 @@
+.basket {
+    position: relative;
+
+    &__sum-indicator {
+        position: absolute;
+        top: -20px;
+        left: 15px;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        font-size: 13px;
+        line-height: 21px;
+        text-align: center;
+        color: #000;
+        background-color: #fafafa;
+        border-radius: 50%;
+
+        &:hover {
+            color: #fff;
+            background-color: rgb(248, 178, 157);
+        }
+    }
+
+    &__item {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #b4b4b4;
+    }
+
+    &__list--closed {
+        display: none;
+    }
+
+    &__list--opened {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 15px;
+        width: 400px;
+        z-index: 10;
+        @include ul-padding-margin-null;
+        padding: 15px;
+        background: #fafafa;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);   
+    }
+
+    &__title {
+        width: 180px;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #303030;
+    }
+
+    &__flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__bold {
+        font-weight: 500;
+        color: #404040;
+    }
+
+    &__count,
+    &__price,
+    &__sum
+     {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        text-transform: none;
+        color: #505050;
+    }
+
+    &__button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 135px;
+        padding-bottom: 15px;
+    }
+
+    &__increase,
+    &__reduce,
+    &__delete
+     {
+        padding: 5px 15px;
+        font-size: 14px;
+        line-height: 21px;
+        text-transform: uppercase;
+        letter-spacing: .03em;
+        background: transparent;
+        border: 1px solid #303030;
+    }
+}
