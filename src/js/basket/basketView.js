@@ -36,11 +36,9 @@ export default class BasketView {
         });
 
         const basketButton = document.querySelector(`.basket`);
-        console.log(basketButton);
         basketButton.addEventListener(`click`, (event) => {
             event.preventDefault();
-            console.log(`click`);
-            const list = basketButton.querySelector(`.basket__list`);
+            const list = document.querySelector(`.basket__list`);
             if(list.classList.contains(`basket__list--closed`)) {
                 list.classList.remove(`basket__list--closed`);
                 list.classList.add(`basket__list--opened`);

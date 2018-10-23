@@ -1,4 +1,6 @@
 node_modules/*
 app/*
 .vscode/*
+coverage/
 src/img/*.png
+src/img/source/*

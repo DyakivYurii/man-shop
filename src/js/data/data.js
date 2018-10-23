@@ -5,7 +5,7 @@ export const initialState = {
         'price': 40,
         'like': 0,
         'comment': {},
-        'hashTag': `#clothes#cool#jaket`,
+        'hashTag': `#clothes#cool#jaket`
     },
     'dsfd1234': {
         'name': `Cool Shoes for Real Man`,
@@ -13,7 +13,7 @@ export const initialState = {
         'price': 100,
         'like': 0,
         'comment': {},
-        'hashTag': `#clothes#cool#shoes`,
+        'hashTag': `#clothes#cool#shoes`
     },
     'ds151234': {
         'name': `Bag For Man`,
@@ -21,7 +21,7 @@ export const initialState = {
         'price': 130,
         'like': 0,
         'comment': {},
-        'hashTag': `#clothes#cool#shoes`,
+        'hashTag': `#clothes#cool#shoes`
     },
     'ds23534': {
         'name': `Bag For Woman`,
@@ -29,6 +29,6 @@ export const initialState = {
         'price': 150,
         'like': 0,
         'comment': {},
-        'hashTag': `#clothes#cool#shoes`,
+        'hashTag': `#clothes#cool#shoes`
     }
 };

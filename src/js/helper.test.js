@@ -12,7 +12,7 @@ describe(`EventEmitter`, () => {
         expect(result).toEqual(expect.any(Object));
     });
 
-    test(`storage must be empty Object at first initialisationn`, () => {
+    test(`storage must be empty Object at first initialisation`, () => {
         const eventEmitter = new EventEmitter();
         const result = eventEmitter.events;
         expect(result).toEqual({});
@@ -49,7 +49,5 @@ describe(`EventEmitter`, () => {
             // expect(eventEmitter.emit).toHaveBeenCalledWith(expect.any());
         });
     });
-    /**
-     * @param 
-     */
+
 });

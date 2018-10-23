@@ -44,7 +44,6 @@
     ]
   },
   "jest": {
-    "testEnvironment": "jest-environment-node",
     "collectCoverageFrom": [
       "src/js/**/*.js"
     ],
