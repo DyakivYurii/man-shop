@@ -10,3 +10,15 @@ body {
     background-color: #fff;
     color: #000;
 }
+
+// Change Bootstrap Grid System
+@media (min-width: 320px) and (max-width: 575px) {
+    .container {
+        width: 320px;
+    }
+}
+
+
+// img small
+// width: 290 / 580
+// height: 341 / 682

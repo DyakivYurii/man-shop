@@ -16,13 +16,13 @@
         <header class="main-header">
             <div class="container">
                 <nav class="main-navigation row align-items-center">
-                    <h1 class="main-navigation__logo col-sm-3 col-lg-3"><span class="main-navigation__accent">M</span>an<span class="main-navigation__accent">S</span>hop</h1>
-                    <div class="main-navigation__burger col-sm-1">
-                        <button class="main-navigation__toggle" type="button">
+                    <h1 class="main-navigation__logo col-4 col-sm-3 col-lg-3"><span class="main-navigation__accent">M</span>an<span class="main-navigation__accent">S</span>hop</h1>
+                    <div class="main-navigation__burger main-navigation__burger--closed order-3 col-2 col-sm-2">
+                        <button class="main-navigation__toggle main-navigation__toggle--closed" type="button">
                             <span class="visual-hidden">Show menu</span>
                         </button>
                     </div>
-                    <ul class="main-navigation__site-list main-navigation__site-list--opened col-sm-12 col-lg-7 order-2 order-md-1">
+                    <ul class="main-navigation__site-list main-navigation__site-list--opened col-sm-12 col-md-6 col-lg-7 order-2 order-md-1">
                         <li class="main-navigation__item">
                             <a href="#" class="main-navigation__link">Home</a>
                         </li>
@@ -33,7 +33,7 @@
                             <a href="#" class="main-navigation__link">Contact</a>
                         </li>  
                     </ul>
-                    <ul class="main-navigation__user-list col-sm-8 col-lg-2 order-1 order-md-2">
+                    <ul class="main-navigation__user-list col-6 col-sm-7 col-md-3 col-lg-2 order-1 order-md-2">
                         <li class="main-navigation__user-item">
                             <a href="#" class="main-navigation__user-link main-navigation__user-link--search">
                                 <p class="visual-hidden">Search</p>
@@ -129,7 +129,11 @@
                             </article>
                             <article class="product__item col-sm-6 col-md-6 col-lg-4" data-id="dsfs2341">
                                     <div class="product__wrapper">
-                                        <img class="product__img" src="./img/item-1.jpg" alt="image of product">
+                                        <picture>
+                                            <source media="(min-width: 576px)" srcset="img/item-1-sm-1x.jpg 1x, img/item-1-sm-2x.jpg 2x">
+                                            <img class="product__img" src="img/item-1-xs-1x.jpg" srcset="img/item-1-xs-2x.jpg 2x" alt="pizza 1">
+                                        </picture>
+                                        <!-- <img class="product__img" src="./img/item-1.jpg" alt="image of product"> -->
                                         <div class="product__info">
                                             <h3 class="product__name">Cool Jaket For Real Man</h3>
                                             <p class="product__like"></p>
