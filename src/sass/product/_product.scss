@@ -62,12 +62,25 @@
         font-weight: 700;
         letter-spacing: 0.03em;
     }
+
+    &__like-button,
+    &__basket-button {
+        margin-top: 15px;
+        padding: 10px 25px;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: .05em;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #303030;
+        background-color: transparent;
+        border: 1px solid #707070;
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+            background-color: rgb(248, 178, 157);
+            border: none;
+        }
+    }
 }
-
-// .green {
-//     background-color: green;
-// }
-
-// .pink {
-//     background-color: pink;
-// }

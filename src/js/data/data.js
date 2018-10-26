@@ -10,7 +10,7 @@ export const initialState = {
             'x2-md': `img/item-1-sm-md-2x.jpg 2x`,
             'x1-lg': `img/item-1-lg-1x.jpg 1x`,
             'x2-lg': `img/item-1-lg-2x.jpg 2x`,
-            'x1-xl': `img/item-1-lg-1x.jpg 1x`,
+            'x1-xl': `img/item-1.jpg 1x`,
             'x2-xl': `img/item-1-lg-2x.jpg 2`
         },
         'price': 40,
@@ -29,7 +29,7 @@ export const initialState = {
             'x2-md': `img/item-1-sm-md-2x.jpg 2x`,
             'x1-lg': `img/item-1-lg-1x.jpg 1x`,
             'x2-lg': `img/item-1-lg-2x.jpg 2x`,
-            'x1-xl': `img/item-1-lg-1x.jpg 1x`,
+            'x1-xl': `img/item-1.jpg 1x`,
             'x2-xl': `img/item-1-lg-2x.jpg 2`
         },
         'price': 100,
@@ -48,7 +48,7 @@ export const initialState = {
             'x2-md': `img/item-1-sm-md-2x.jpg 2x`,
             'x1-lg': `img/item-1-lg-1x.jpg 1x`,
             'x2-lg': `img/item-1-lg-2x.jpg 2x`,
-            'x1-xl': `img/item-1-lg-1x.jpg 1x`,
+            'x1-xl': `img/item-1.jpg 1x`,
             'x2-xl': `img/item-1-lg-2x.jpg 2`
         },
         'price': 130,
@@ -67,7 +67,7 @@ export const initialState = {
             'x2-md': `img/item-1-sm-md-2x.jpg 2x`,
             'x1-lg': `img/item-1-lg-1x.jpg 1x`,
             'x2-lg': `img/item-1-lg-2x.jpg 2x`,
-            'x1-xl': `img/item-1-lg-1x.jpg 1x`,
+            'x1-xl': `img/item-1.jpg 1x`,
             'x2-xl': `img/item-1-lg-2x.jpg 2`
         },
         'price': 150,

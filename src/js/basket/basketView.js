@@ -30,7 +30,7 @@ export default class BasketView {
 
         // Bind button for check element which has cliked and send this to basket store
         items.forEach((item) => {
-            item.querySelector(`.basket`).addEventListener(`click`, (event) => { 
+            item.querySelector(`.product__basket-button`).addEventListener(`click`, (event) => { 
                 event.preventDefault();
                 this.addItemBasket(item);
             });

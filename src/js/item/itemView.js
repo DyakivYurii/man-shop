@@ -27,18 +27,13 @@ export default class ItemView {
                     </picture>
                     <div class="product__info">
                         <h3 class="product__name">${item.name}</h3>
-                        <p class="product__like"></p>
                         <p class="product__price">$${item.price}</p>
                     </div>
-                    <button class="like-button" type="button">Like</button>
-                    <button class="basket" type="button">Add to card</button>
+                    <button class="product__like-button" type="button">Like</button>
+                    <button class="product__basket-button" type="button">Add to card</button>
                 </div>
             </article>`;
-
-            
-          
-                
-       
+            // <p class="product__like"></p>
             this.container.insertAdjacentHTML('beforeend', markup);
         });
     }
