@@ -2,6 +2,7 @@
     height: 55px;
     background-color: #fafafa;
     margin-bottom: 50px;
+    padding-top: 14px;
 
     &__link {
         position: relative;
@@ -17,30 +18,5 @@
         &--current {
             color: #303030;
         }
-
-        // &__link::before {
-        //     content: "/";
-        //     position: absolute;
-        //     // top: 20px;
-        //     // right: 0;   
-        // }
     }
 }
-
-// .bread-crumbs__text {
-//     padding-top: 18px;
-//     margin: 0px;
-//     font-size: 12px;
-//     line-height: 18px;
-//     letter-spacing: 0.05em;
-//     color: #b1b1b1;
-
-//     &--current {
-//         color: #303030;
-//     }
-// }
-
-
-// <a href="#" class="bread-crumbs__link">Home</a>
-// <!-- <span class="bread-crumbs__slash"> / </span> -->
-// <a class="bread-crumbs__link bread-crumbs__link--current">SHOP</a>
